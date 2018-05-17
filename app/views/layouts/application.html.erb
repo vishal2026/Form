@@ -13,11 +13,12 @@
     <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' %>
     <script type="text/javascript">
       
+    // Ajax call for dynamically loading cities list  
     $(document).ready(function() {
 
       $('#user_country_id').change(function() {
           $.ajax({
-             url: "http://"+window.location.host+"/registration/show_cities", // this will be routed
+             url: "http://"+window.location.host+"/city", // this will be routed
              type: 'GET',
              data: {
                country_id: $("#user_country_id").val()
@@ -51,7 +52,7 @@
   <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">Application</a>
+    <a class="navbar-brand" href="/">Application</a>
   </div>
 </nav>
     <%= yield %>
