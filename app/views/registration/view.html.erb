@@ -1,0 +1,27 @@
+<%  %>
+<%  %>
+<div class="container">
+	<table class="table">
+	    <thead class="thead-light">
+	      <tr>
+	        <th>Firstname</th>
+	        <th>Lastname</th>
+	        <th>Email</th>
+	        <th>Country</th>
+	        <th>City<th>
+	        <th>Action</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td><%= @user.first_name %></td>
+	        <td><%= @user.last_name %></td>
+	        <td><%= @user.email %></td>
+	        <td><%= @country.country_name %></td>
+	        <td><%= @city.city_name %></td>
+	        <th><%= link_to "Confirm", root_path+'registration/email?id='+@user.id.to_s, :class => "my-class", :id => "my-id" %></th>
+	      </tr>
+	      
+	    </tbody>
+	</table>
+</div>
