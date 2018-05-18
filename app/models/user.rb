@@ -9,8 +9,9 @@ class User < ApplicationRecord
     message: "Only Letters Allowed Without Spaces." }
     validates :email, presence: { message: "Email Field Required." }, length: { in: 3..60 },format: { with: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i,
     message: "Only Email Format Allowed.For Ex : email@email.com." }, confirmation: true
-    validates :email_confirmation, presence: true
+    validates :email_confirmation, presence: { message: "Confirm Email Field Required." }
     validates :country_id, presence: { message: "Please Select Country." }
     validates :city_id, presence: { message: "Please Select City." }
+    validates :city, presence: { message: "Please Select City." }
 end
- 
+  
