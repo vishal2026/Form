@@ -1,7 +1,5 @@
 class City < ApplicationRecord
-	
-	has_one :user
+	has_many :users
 	belongs_to :country
-
 end
   

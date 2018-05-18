@@ -1,6 +1,7 @@
 
 <div class="container">
 	<table class="table .table-striped table-bordered">
+
 	    <thead class="thead-light">
 	      <tr>
 	        <th>Firstname</th>
@@ -11,6 +12,7 @@
 	        <th>Action</th>
 	      </tr>
 	    </thead>
+
 	    <tbody>
 	      <tr>
 	        <td><%= @user.first_name %></td>
@@ -23,7 +25,9 @@
 	    
 	    </tbody>
 	</table>
+	<!-- Confirmation Alert After Mail Sent -->
 	<div class="<%= "alert alert-success" if @confirmation_alert %>">
 		<%= @confirmation_alert if @confirmation_alert %>
 	</div>
+
 </div>
